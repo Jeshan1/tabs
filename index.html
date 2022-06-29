@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans">
+
+    <!--  tab section  -->
+
+    <div class=" w-6/12 my-40 mx-[24%]" x-data="{ opentab: 1 }">
+        <h1 class="text-center text-2xl text-blue-600 font-bold my-4">Our New Tab Design </h1>
+       <div class="bg-yellow-400 px-8 py-4 rounded-t-2xl">
+            <button class="px-4 py-2 border-2 bg-blue-600 text-white rounded-xl text-xl" @click="opentab = 1">Home</button>
+            <button class="px-4 py-2 border-2 bg-blue-600 text-white rounded-xl text-xl" @click="opentab = 2">About</button>
+            <button class="px-4 py-2 border-2 bg-blue-600 text-white rounded-xl text-xl" @click="opentab = 3">Contact</button>
+       </div>
+       
+        
+        <div x-show="opentab === 1" class="bg-blue-400 text-white px-8 py-4 text-xl font-bold rounded-b-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Earum quos et maiores eum sed commodi, iusto quod quisquam dolore expedita accusantium, voluptatibus illum non similique veritatis est iure.
+        </div>
+
+        <div x-show="opentab === 2" class="bg-green-400 text-white px-8 py-4 text-xl font-bold rounded-b-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorem est neque, tempora amet ratione tenetur voluptatum. Blanditiis recusandae dolorem temporibus debitis natus et consequatur mollitia nulla. Officia, facere omnis!
+        </div>
+
+        <div x-show="opentab === 3" class="bg-gray-300 text-black px-8 py-4 text-xl font-bold rounded-b-2xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus veniam totam aliquam nesciunt culpa iusto iste, cumque at ex amet, provident asperiores repellendus dolorem voluptatem, tempora facilis doloremque? Doloremque, repellendus.
+        </div>
+ 
+    </div>
+
+    <!-- tab section end  -->
+
+    <!-- Alpine.js link -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    
+</body>
+</html>
